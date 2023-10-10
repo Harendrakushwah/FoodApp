@@ -7,16 +7,12 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import WelcomeScreen from './Screens/WelcomeScreen';
-import SignInScreen from './Screens/SignInScreen';
-import SignupScreen from './Screens/SignupScreen';
+import RootNavigation from './src/Navigation/RootNavigation';
 
 export default function App() {
 
   return(
-    // <WelcomeScreen />
-    <SignInScreen />
-    // <SignupScreen />
+    <RootNavigation />
   );
 
 

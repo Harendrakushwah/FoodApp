@@ -11,7 +11,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Octicons from 'react-native-vector-icons/Octicons';
 
-const SignupScreen = () => {
+const SignupScreen = ({navigation}) => {
   const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
@@ -118,7 +118,7 @@ const SignupScreen = () => {
         />
       </View>
 
-      <TouchableOpacity style={{width: '85%', paddingBottom: 10}}>
+      <TouchableOpacity style={{width: '85%', paddingBottom: 10}} onPress={()=>navigation.navigate('home')}>
         <Text style={SignUpStyles.btn1}>Sign up</Text>
       </TouchableOpacity>
 
@@ -146,10 +146,7 @@ const SignupScreen = () => {
       <Text style={SignUpStyles.lineHr}></Text>
 
       <View style={SignUpStyles.footerView}>
-        <Text>Already have an account?</Text>
-        <TouchableOpacity style={{marginLeft: 4}}>
-          <Text style={{color: 'green'}}>Sign Up</Text>
-        </TouchableOpacity>
+        <Text>Already have an account? <Text style={{color: 'green'}} onPress={()=>navigation.navigate('signin')}>Sign In</Text></Text>
       </View>
     </View>
   );

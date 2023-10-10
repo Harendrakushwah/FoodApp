@@ -1,8 +1,10 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
+import SignupScreen from './SignupScreen';
+import SignInScreen from './SignInScreen';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome To Foodie</Text>
@@ -20,11 +22,11 @@ const WelcomeScreen = () => {
 
       {/* Creating signUp & SignIn Btn */}
       <View style={styles.btnContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('signup')}>
           <Text style={styles.btn1}>Sign up</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('signin')}>
           <Text style={styles.btn1}>Sign in</Text>
         </TouchableOpacity>
       </View>

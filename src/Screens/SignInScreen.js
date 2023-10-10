@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Octicons from 'react-native-vector-icons/Octicons';
 
-const SignInScreen = () => {
+const SignInScreen = ({navigation}) => {
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -59,7 +59,7 @@ const SignInScreen = () => {
         />
       </View>
 
-      <TouchableOpacity style={{width: '85%', paddingBottom: 10}}>
+      <TouchableOpacity style={{width: '85%', paddingBottom: 10}} onPress={()=>navigation.navigate('home')}>
         <Text style={SignInStyles.btn1}>Sign in</Text>
       </TouchableOpacity>
 
@@ -87,7 +87,7 @@ const SignInScreen = () => {
 
       <Text style={SignInStyles.lineHr}></Text>
       <Text style={{marginTop: 5, height: '15%'}}>
-        Don't have an account? <Text style={{color: 'green'}}> Sign Up</Text>
+        Don't have an account? <Text style={{color: 'green'}} onPress={()=>navigation.navigate('signup')}> Sign Up</Text>
       </Text>
     </View>
   );
