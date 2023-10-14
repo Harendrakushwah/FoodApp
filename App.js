@@ -12,6 +12,8 @@ import RootNavigation from './src/Navigation/RootNavigation';
 export default function App() {
 
   return(
+    //HAred
+    
     <RootNavigation />
   );
 
