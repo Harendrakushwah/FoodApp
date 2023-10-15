@@ -8,7 +8,6 @@ const categories = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.head}>Categories</Text>
-
       
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={styles.box}>
